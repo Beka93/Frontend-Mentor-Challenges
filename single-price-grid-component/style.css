@@ -1,0 +1,140 @@
+/* BASE STYLES */
+* {
+    box-sizing: border-box;
+}
+
+
+h1 {
+    font-size: clamp(18px, 5vw, 30px);
+}
+
+h2 {
+    font-size: clamp(14px, 4vw, 18px);
+}
+
+
+html {
+    font-family: 'Karla', sans-serif;
+}
+
+footer {
+    background-color: hsl(179, 62%, 43%);
+    color: #ffffff;
+    padding: 10px;
+}
+
+/* SMALL TO MEDIUM DEVICES*/
+.description {
+    background-color: white;
+    color: hsl(218, 22%, 67%);
+    padding: 40px 40px 20px 40px;
+}
+
+.heading__join {
+    color: hsl(179, 62%, 43%);
+    font-weight: 700;
+}
+
+.subheading {
+    color: hsl(71, 73%, 54%);
+    padding: 25px 0px;
+    font-weight: 700;
+}
+
+.text {
+    line-height: 200%;
+    font-size: clamp(13px, 4vw, 16px);
+}
+
+.heading {
+    font-weight: 700;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 15px 0px;
+    text-align: left;
+}
+
+.signup {
+    background-color: hsl(179, 62%, 43%);
+    color: #ffffff;
+    text-align: left;
+    padding: 0px 40px 15px 40px;
+}
+
+.pricing {
+    color: hsl(204, 43%, 93%);
+}
+
+.price {
+    font-weight: 700;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.access {
+    padding: 20px 0px;
+}
+
+.button {
+    color: #ffffff;
+    background-color: hsl(71, 73%, 54%);
+    border: none;
+    border-radius: 5px;
+    padding: 15px 80px;
+    width: 95%;
+}
+
+.about {
+    background-color: rgb(74, 190, 189);
+    color: hsl(204, 43%, 93%);
+    padding: 0px 30px 15px 40px;
+}
+
+.list {
+    line-height: 1.6;
+}
+
+.attribution {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+/*MEDIUM TO LARGE DEVICES*/
+
+@media (min-width: 768px) {
+    .container {
+        display: grid;
+
+        grid-template-areas:
+            "header header"
+            "main sidebar";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        height: 100vh;
+    }
+    .description {
+        grid-area: header;
+        padding: 60px 40px 20px 70px;
+    }
+    .signup {
+        grid-area: main;
+        padding: 30px 40px 15px 70px;
+
+    }
+    .about {
+        grid-area: sidebar;
+        padding: 30px 40px 15px 70px;
+    }
+
+    .text {
+        white-space: pre-line; 
+        font-size: 18px;
+    }
+    .button {
+        width: 80%;
+    }
+}
